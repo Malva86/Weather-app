@@ -1,0 +1,190 @@
+:root {
+  --back: #f6f5f5;
+  --back2: #e3e3e3;
+  --sun: #f1c232;
+  --cloud: #0048ba;
+  --rain: #733f83;
+  --button: #3bb4c1;
+  --button2: #048998;
+  --white: #fff;
+}
+
+/*General*/
+
+.container {
+  background-color: var(--back);
+  padding: 15px;
+  margin: 135px;
+  border-radius: 10px;
+  font-family: "Joan", serif;
+}
+
+/*Header*/
+
+.header {
+  background-color: var(--back2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 100px;
+}
+
+.main-list li {
+  display: inline-block;
+  padding-left: 0;
+}
+
+.main-list-two {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+.app-title {
+  text-align: center;
+  padding: 25px;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.city-name {
+  position: relative;
+  right: 200px;
+}
+
+.main-city-name {
+  font-weight: 600;
+  font-size: 45px;
+  text-decoration: underline;
+  color: var(--button2);
+}
+
+.add-one {
+  font-size: 45px;
+  text-decoration: underline;
+}
+
+.add-two {
+  font-size: 45px;
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+}
+
+.main-temp {
+  font-size: 38px;
+  line-height: 25px;
+}
+.main-day {
+  font-weight: 600;
+  font-size: 45px;
+  text-decoration: underline;
+  color: var(--button2);
+}
+
+.main-cycle {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.main-icon {
+  font-size: 100px;
+  color: var(--sun);
+}
+
+.main {
+  margin: 25px 0;
+  text-align: center;
+}
+
+#cel {
+  text-decoration: none;
+}
+
+#far {
+  text-decoration: none;
+}
+
+#cel2 {
+  text-decoration: none;
+}
+
+#far2 {
+  text-decoration: none;
+}
+
+/*Buttons*/
+button {
+  background-color: var(--button);
+  padding: 10px;
+}
+
+button:hover {
+  background-color: var(--button2);
+  color: var(--cloud);
+}
+
+.confirm-button {
+  border-radius: 10px;
+  position: relative;
+  top: -35px;
+  left: 230px;
+  border: var(--button);
+}
+
+.current-city-button {
+  border-radius: 10px;
+  position: relative;
+  top: -35px;
+  left: 240px;
+  border: var(--button);
+}
+
+/*Main*/
+.diagram {
+  text-align: center;
+  background-color: var(--back2);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.sun {
+  color: var(--sun);
+}
+
+.cloud {
+  color: var(--cloud);
+}
+
+.rain {
+  color: var(--rain);
+}
+
+.diagram-icons {
+  font-size: 50px;
+  text-align: center;
+}
+
+.diagram-day {
+  font-weight: 600;
+}
+
+/*Footer*/
+.footer {
+  padding: 50px;
+  margin-left: 200px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.day-footer {
+  font-size: 26px;
+}
+
+.card-text {
+  margin-bottom: 5px;
+}

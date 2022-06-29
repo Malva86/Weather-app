@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="src/styles.css" />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/e0e0d61b4f.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <!--Title-->
+    <title>Weather-App</title>
+
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="container">
+    <header class="header">
+      <!--App Title-->
+      <h1 class="app-title">Check your weather!</h1>
+      <!--Form-->
+      <form class="city-name" id="city-form">
+        <input type="text" placeholder="Enter City Name" autofocus="on" id="input-form"/>
+      </form>
+      <!--Menu Buttons-->
+      <button class="confirm-button" id="button-confirm">Confirm</button>
+      <button class="current-city-button" id="button-current">Current City</button>
+    </header>
+
+    <main>
+      <!--Main Weather-->
+      <section class="main">
+        <ul class="main-list">
+        <li class="add-one">It is:</li>
+        <li class="main-day" id="day-main">Sunday</li>
+        <li class="add-two">in:</li>
+        <li class="main-city-name" id="city-name-main">Enter City Name <i class="fa-solid fa-city"></i></li>
+        </ul>
+        <ul class="main-list-two">
+        <li class="main-temp"><span id="main-temp-day">18</span> <sup><a href="#" id="cel">°C</a>|<a href="#" id="far">°F</a></sup>
+          /<span id="main-temp-night">15</span> <sup><a href="#" id="cel2">°C</a>|<a href="#" id="far2">°F</a></sup></li>
+        <li class="main-cycle">Day/Night</li>
+        <li><i class="fa-solid fa-sun main-icon"></i></li>
+        </ul>
+      </section>
+      <!--Temp-Diagram-->
+      <div class="diagram">
+         <section class="diagram-icons">
+        <div class="row">
+          <div class="col-2"><i class="fa-solid fa-sun sun"></i></div>        
+          <div class="col-2"><i class="fa-solid fa-sun sun"></i></div>          
+          <div class="col-2"><i class="fa-solid fa-cloud-sun cloud"></i></div>         
+          <div class="col-2"><i class="fa-solid fa-cloud-rain rain"></i></div>         
+          <div class="col-2"><i class="fa-solid fa-cloud-rain rain"></i></div>
+          <div class="col-2"><i class="fa-solid fa-cloud-sun cloud"></i></div> 
+        </div>
+      </section>
+      <section class="diagram-temp">
+        <div class="row">
+          <div class="col-2">25°C/19°C</div>        
+          <div class="col-2">23°C/15°C</div>          
+          <div class="col-2">18°C/11°C</div>         
+          <div class="col-2">15°C/9°C</div>         
+          <div class="col-2">14°C/10°C</div>
+          <div class="col-2">19°C/16°C</div> 
+        </div>
+      </section>
+       <section class="diagram-cycle">
+        <div class="row">
+          <div class="col-2">Day/Night</div>        
+          <div class="col-2">Day/Night</div>          
+          <div class="col-2">Day/Night</div>         
+          <div class="col-2">Day/Night</div>         
+          <div class="col-2">Day/Night</div>
+          <div class="col-2">Day/Night</div> 
+        </div>
+      </section> 
+      <section class="diagram-day">
+        <div class="row">
+          <div class="col-2">Mon</div>        
+          <div class="col-2">Thu</div>          
+          <div class="col-2">Wed</div>         
+          <div class="col-2">Thu</div>         
+          <div class="col-2">Fri</div>
+          <div class="col-2">San</div> 
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!--Wind-->
+      <section class="footer">
+    <div class="row">
+      <div class="col-3">
+       <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Wind   <i class="fa-solid fa-wind wind"></i></h5>
+          <h6 class="card-subtitle mb-2 text-muted day-footer" id="wind-day">Sunday</h6>
+          <p class="card-text">
+            Speed: <span id="wind-speed">0</span> km/h
+          </p class="card-text">
+          <p>Deg: <span id="wind-deg">0</span>°</p> 
+        </div>
+       </div>
+      </div>
+      <!--Rain-->
+      <div class="col-3"></div>
+       <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Rain Chance  <i class="fa-solid fa-cloud-rain rain"></i></h5>
+          <h6 class="card-subtitle mb-2 text-muted day-footer" id="rain-day">Sunday</h6>
+          <p class="card-text">
+            Humidity: <span id="humidity">0</span>%
+          </p class="card-text">
+          <p>Pressure: <span id="pressure">0</span> hPa</p>
+        </div>
+       </div>
+      </div>
+    </div>
+    </section>
+    </footer>
+    </div>
+    <!--JS-->
+    <script type="text/javascript" src="src/index.js"></script>
+  </body>
+</html>
