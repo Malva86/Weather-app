@@ -188,3 +188,7 @@ button:hover {
 .card-text {
   margin-bottom: 5px;
 }
+
+.link-to-github {
+  text-align: center;
+}
